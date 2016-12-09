@@ -5,71 +5,61 @@
   <title>jsTree test</title>
   <!-- 2 load the theme CSS file -->
   <link rel="stylesheet" href="library/themes/default/style.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="library/custom-style.css" />
 </head>
-<body>
-  <!-- 3 setup a container element -->
-  <div id="jstree">
-    <!-- in this example the tree is populated from inline HTML -->
-    <ul>
-		        <li>	<a href="#">Parent</a>
+<body style="margin: auto; width: 100%">
+		<div style="margin-bottom: 20px; margin-top: 20px;">
+		    <input type="search" placeholder="Search" id="search_cell" class="search-input form-control" style="width: 20%;"></input> 
+		</div>
+	  <!-- 3 setup a container element -->
+	  <div id="jstree">
+	    <!-- in this example the tree is populated from inline HTML -->
+	    <ul id="list_cell">
+			        <li><a href="#">Global</a>
 
-		            <ul>
-		                <li>	<a href="#">Child</a>
+			            <ul>
+			                <li><a href="#">Apple</a>
 
-		                    <ul>
-		                        <li>	<a href="#">Grand Child</a>
+			                    <ul>
+			                        <li><a href="#">Iphone</a>
 
-		                        </li>
-		                    </ul>
-		                </li>
-		                <li>	<a href="#">Child</a>
+			                        </li>
+			                    </ul>
+			                </li>
+			                <li><a href="#">Samsung</a>
 
-		                    <ul>
-		                        <li><a href="#">Grand Child</a>
-		                        </li>
-		                        <li>	<a href="#">Grand Child</a>
+			                    <ul>
+			                        <li><a href="#">Galaxy S5</a>
+			                        </li>
+			                        <li><a href="#">Galaxy S7</a>
 
-		                            <ul>
-		                                <li>	<a href="#">Great Grand Child</a>
+			                            <ul>
+			                                <li><a href="#">Galaxy J7</a>
 
-		                                </li>
-		                                <li>	<a href="#">Great Grand Child</a>
+			                                </li>
+			                                <li><a href="#">Galaxy J5</a>
 
-		                                </li>
-		                                <li>	<a href="#">Great Grand Child</a>
+			                                </li>
+			                                <li><a href="#">Nokia</a>
 
-		                                </li>
-		                            </ul>
-		                        </li>
-		                        <li><a href="#">Grand Child</a>
-		                        </li>
-		                    </ul>
-		                </li>
-		            </ul>
-		        </li>
-		    </ul>
-  </div>
-  <button>demo button</button>
+			                                </li>
+			                            </ul>
+			                        </li>
+			                        <li><a href="#">BackBery</a>
+			                        </li>
+			                    </ul>
+			                </li>
+			            </ul>
+			        </li>
+			    </ul>
+	  </div>
 
-  <!-- 4 include the jQuery library -->
-  <script src="library/jquery-3.1.1.min.js"></script>
-  <!-- 5 include the minified jstree source -->
-  <script src="library/jstree.min.js"></script>
-  <script>
-  $(function () {
-    // 6 create an instance when the DOM is ready
-    $('#jstree').jstree();
-    // 7 bind to events triggered on the tree
-    $('#jstree').on("changed.jstree", function (e, data) {
-      console.log(data.selected);
-    });
-    // 8 interact with the tree - either way is OK
-    $('button').on('click', function () {
-      $('#jstree').jstree(true).select_node('child_node_1');
-      $('#jstree').jstree('select_node', 'child_node_1');
-      $.jstree.reference('#jstree').select_node('child_node_1');
-    });
-  });
-  </script>
+	  <!-- 4 include the jQuery library -->
+	  <script src="library/jquery-3.1.1.min.js"></script>
+	  <!-- 5 include the minified jstree source -->
+	  <script src="library/jstree.min.js"></script>
+	  <script src="library/jquery.mark.js"></script>
+	  <script src="library/app.js"></script>
 </body>
 </html>
