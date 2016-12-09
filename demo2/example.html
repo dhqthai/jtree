@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tree Org Chart</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="jquery.orgchart.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="jquery.orgchart.css"/>
+	<script src="jquery.treemenu.js" type="text/javascript"></script>
+  	<link href="jquery.treemenu.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="example.css">
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function() {
+            $("ul.mytree").orgChart({container: $("#chart"), interactive: true, showLevels: 2});
+        });
+        </script>
+</head>
+<body>
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		<ul class="mytree" id="organization">
+            <li><span>Prices</span>
+                <ul>
+                    <li><a href="#">Transport</a>
+                        <ul>
+                            <li><a href="#hovertanks">Hover tanks</a></li>
+                            <li><a href="#doomstars">Doomstars</a></li>
+                            <li><a href="#shuttles">Shuttles</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#weapons" class="active">Weapons</a>
+                        <ul>
+                            <li><a href="#knives">Knives</a></li>
+                            <li><a href="#grenades">Grenades</a></li>
+                            <li><a href="#lasers">Lasers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#suits">Suits</a></li>
+                </ul>
+            </li>
+		</ul>
+	</div>
+	<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+		<div id="chart">
+        </div>
+	</div>
+
+	<script type="text/javascript">
+      $(document).ready(function(){
+          $("ul.mytree").treemenu({'delay': 300, 'closeOther': true, 'activeSelector': 'active'}).openActive();
+      });
+  	</script>
+</body>
+</html>
