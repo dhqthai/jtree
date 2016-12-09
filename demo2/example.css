@@ -1,0 +1,46 @@
+body {
+    font-family      : Ubuntu, SansSerif;
+}
+
+div#content {
+    position         : relative;
+    left             : 300px;
+}
+
+div.orgChart a {
+    color            : black;
+    text-decoration  : none;
+}
+
+div.orgChart a:hover {
+    color            : black;
+    text-decoration  : underline;
+}
+
+.mytree {
+    background-color:#2C3E50;
+    color:#46CFB0;
+    margin-top: 10px;
+}
+.mytree li,
+.mytree li > a,
+.mytree li > span {
+    padding: 4pt;
+    border-radius: 4px;
+}
+
+.mytree li a {
+   color:#46CFB0;
+    text-decoration: none;
+    line-height: 20pt;
+    border-radius: 4px;
+}
+
+.mytree li a:hover {
+    background-color: #34BC9D;
+    color: #fff;
+}
+
+.mytree li a.active:hover {
+    background-color: #34BC9D;
+}
